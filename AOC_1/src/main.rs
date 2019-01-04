@@ -9,7 +9,7 @@ fn get_challenge_data(number: u8) -> String {
         number.to_string()
     );
     let challenge_url = Url::parse(&url).unwrap();
-    let session = env::var("AOC_SESSION").unwrap();
+    let session = env::var("AOC_SESSION").expect("You have not set the AOC_SESSION environment variable");
     let client = reqwest::Client::new();
     let body = client
         .get(challenge_url)
