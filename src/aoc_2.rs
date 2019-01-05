@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-fn part_1(data: &Vec<String>) {
+fn part_1(data: &Vec<String>) -> u32 {
     let mut twos: u32 = 0;
     let mut threes: u32 = 0;
 
@@ -33,6 +33,7 @@ fn part_1(data: &Vec<String>) {
         threes,
         twos * threes
     );
+    twos * threes
 }
 
 fn part_2(data: &Vec<String>) -> i32 {
@@ -42,6 +43,5 @@ fn part_2(data: &Vec<String>) -> i32 {
 pub fn main() {
     let body = super::get_challenge_data(2);
     let data: Vec<String> = body.split('\n').map(|x| x.to_string()).collect();
-    //let data : Vec<String> = ["abcdef".to_string(), "bababc".to_string(), "abbcde".to_string(), "abcccd".to_string(), "aabcdd".to_string(), "abcdee".to_string(), "ababab".to_string()].to_vec();
     part_1(&data);
 }
