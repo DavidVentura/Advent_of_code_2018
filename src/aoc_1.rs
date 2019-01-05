@@ -1,10 +1,10 @@
 use std::collections::BTreeSet;
-fn part_1(data: &Vec<i32>) {
+pub fn part_1(data: &Vec<i32>) {
     let result: i32 = data.iter().sum();
     println!("{}", result);
 }
 
-fn part_2(data: &Vec<i32>) -> i32 {
+pub fn part_2(data: &Vec<i32>) -> i32 {
     //let mut totals: Vec<i32> = Vec::new();
     let mut totals = BTreeSet::new();
     let mut acum: i32 = 0;

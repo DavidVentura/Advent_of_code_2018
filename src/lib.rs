@@ -25,9 +25,3 @@ fn get_challenge_data(number: u8) -> String {
     assert!(body.contains("Puzzle inputs differ by user") == false);
     body.to_string()
 }
-
-
-fn main() {
-//    aoc_1::main();
-    aoc_2::main();
-}

@@ -1,6 +1,6 @@
 #[cfg(test)]
 mod tests {
-    use super::aoc::aoc_2;
+    use aoc::aoc_2;
     #[test]
     fn test_part_1() {
         let data: Vec<String> = [
@@ -13,6 +13,6 @@ mod tests {
             "ababab".to_string(),
         ]
         .to_vec();
-        assert_eq!(aoc_2::part_1(data), 12);
+        assert_eq!(aoc_2::part_1(&data), 12);
     }
 }
