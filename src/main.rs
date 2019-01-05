@@ -25,11 +25,7 @@ fn get_challenge_data(number: u8) -> String {
     body.to_string()
 }
 
-fn main() {
-    let body = get_challenge_data(1);
-    let data : Vec<i32> = body.split('\n').map(|x| x.parse().unwrap()).collect();
-    aoc_1::part_1(&data);
-    let result_2 = aoc_1::part_2(&data);
-    println!("Result part 2: {}", result_2);
-}
 
+fn main() {
+    aoc_1::main();
+}
