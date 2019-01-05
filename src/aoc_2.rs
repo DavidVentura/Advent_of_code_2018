@@ -36,7 +36,7 @@ fn part_1(data: &Vec<String>) -> u32 {
     twos * threes
 }
 
-fn part_2(data: &Vec<String>) -> i32 {
+pub fn part_2(data: &Vec<String>) -> i32 {
     5
 }
 
