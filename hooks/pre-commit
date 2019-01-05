@@ -1,0 +1,8 @@
+#!/bin/bash
+set -euo pipefail
+git diff --cached --name-only --diff-filter=ACM | while read -r file; do
+    if [[ "$file" != *".rs" ]]; then
+        continue
+    fi
+    rustfmt --check "$file" || echo "Formatting $file" && rustfmt -q "$file"
+done
