@@ -81,12 +81,20 @@ pub fn closest_word(data: &Vec<String>, word: &str) -> String {
     ret.to_string()
 }
 
-pub fn part_2(data: &Vec<String>) -> u32 {
-    let closest_words = data.iter().map(|w| (w, closest_word(data, w)));
-    println!("{:?}", closest_words);
-    let distances = closest_words.map(|(w, c)| (w, c.clone(), distance(w, &c)));
-    println!("{:?}", distances);
-    0
+pub fn part_2(data: &Vec<String>) -> String {
+    let mut min_d = std::u32::MAX;
+    let mut comm:String = String::new();
+    for word in data {
+        let cw = closest_word(data, word);
+        let d = distance(word, &cw);
+        if d < min_d {
+            min_d = d;
+            comm = common_chars(&word, &cw);
+            println!("{} {} {}", word, comm, d);
+        }
+    }
+    println!("{}", comm);
+    comm
 }
 
 pub fn main() {
