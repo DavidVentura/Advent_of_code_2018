@@ -83,7 +83,7 @@ pub fn closest_word(data: &Vec<String>, word: &str) -> String {
 
 pub fn part_2(data: &Vec<String>) -> String {
     let mut min_d = std::u32::MAX;
-    let mut comm:String = String::new();
+    let mut comm: String = String::new();
     for word in data {
         let cw = closest_word(data, word);
         let d = distance(word, &cw);
