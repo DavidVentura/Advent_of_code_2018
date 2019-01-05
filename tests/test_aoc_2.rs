@@ -35,4 +35,16 @@ mod tests {
 
     #[test]
     fn test_closest_word() {}
+
+    #[test]
+    fn test_part_2() {
+        let data: Vec<String> = [
+            "abcde", "fghij", "klmno", "pqrst", "fguij", "axcye", "wvxyz",
+        ]
+        .to_vec()
+        .iter()
+        .map(|x| x.to_string())
+        .collect();
+        assert_eq!(aoc_2::part_2(&data), "fgij");
+    }
 }
