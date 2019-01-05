@@ -1,4 +1,5 @@
 pub mod aoc_1;
+pub mod aoc_2;
 
 use reqwest;
 use reqwest::header::COOKIE;
@@ -27,5 +28,6 @@ fn get_challenge_data(number: u8) -> String {
 
 
 fn main() {
-    aoc_1::main();
+//    aoc_1::main();
+    aoc_2::main();
 }
